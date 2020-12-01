@@ -14,7 +14,7 @@ export default class NavigationBar extends Component {
                         <Nav className="mr-auto">
                         <Nav.Link href="/">Home</Nav.Link>
                         <NavDropdown title="Options" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="/breath">Breath</NavDropdown.Item>
+                            <NavDropdown.Item href="/breath">Breathing</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">Videos</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.3">Distract</NavDropdown.Item>
                             <NavDropdown.Divider />

@@ -1,6 +1,8 @@
 import React, { Component } from "react"
+import Toggle from 'react-toggle'
 import Loading from './Loading'
 import "bootstrap/dist/css/bootstrap.css"
+import "react-toggle/style.css"
 import ocean from '../images/backgrounds/cloud-ocean.jpg'
 import night from '../images/backgrounds/night-sky.jpg'
 
@@ -21,9 +23,7 @@ export default class Breath extends Component {
 
   componentDidMount() {
     setTimeout(() => {
-      fetch("https://jsonplaceholder.typicode.com/posts")
-        .then(response => response.json())
-        .then(json => this.setState({ done: true }));
+      this.setState({ done: true });
     }, 1500);
   }
 
@@ -74,7 +74,16 @@ export default class Breath extends Component {
     
             <div className = 'tst-bttn'>
               <button onClick = {this.handleStart}>{labelBttn}</button>
-              <button onClick = {this.handleToggle}>DARKMODE</button>
+              <label>
+                <Toggle
+                  defaultChecked={this.state.darkMode}
+                  // icons={{
+                  //   checked: <Heart />,
+                  //   unchecked: null,
+                  // }}
+                  onChange={this.handleToggle} />
+                <span>Custom icons</span>
+              </label>
             </div>
     
           </div>

@@ -1,6 +1,7 @@
 body, html {
   height: 100%;
   margin: 0;
+  background-color: rgb(26, 25, 49)
 }
 
 .bg-dim{
@@ -9,8 +10,16 @@ body, html {
   position: fixed;
 }
 
+.loading-screen{
+  width: 100%;
+  height: 100%;
+  background-color: rgb(26, 25, 49);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .breath-page {
-  background-image: url("../src/images/backgrounds/cloud-ocean.jpg");
   background-repeat: no-repeat; 
   background-position: center center;
   background-attachment: fixed;
@@ -44,6 +53,7 @@ body, html {
 }
 
 .circle{
+  background-color: "#e7c52d";
   width: 400px;
   height: 400px;
   border-radius:50%; 

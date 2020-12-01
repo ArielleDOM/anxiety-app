@@ -1,12 +1,23 @@
+
+import React from 'react'
+import {Route, BrowserRouter as Router, Switch} from 'react-router-dom'
 import Breath from './components/Breath'
+import Landing from './components/Landing'
+import Nav from './components/Nav'
 import './App.css';
 
-function App() {
+function App () {
   return (
-    <div className="App">
-      <Breath></Breath>
+    <div>
+        <Nav/>
+       <Router>
+        <Switch>
+          <Route path="/" exact component={Landing} />
+          <Route path = "/breath" component = {Breath}/>
+        </Switch>
+      </Router>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

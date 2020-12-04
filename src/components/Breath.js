@@ -35,8 +35,7 @@ export default class Breath extends Component {
     })
   }
 
-  handleToggle(event) {
-    event.preventDefault()
+  handleToggle() {
 
     this.setState({
       darkMode: !this.state.darkMode,
@@ -44,7 +43,7 @@ export default class Breath extends Component {
   }
 
   render() {
-    const {start} = this.state
+    const {start, darkMode} = this.state
     const labelBttn = start ? "STOP" : "START"
     const displayState = start ? 'block' : 'none'
 
@@ -54,6 +53,8 @@ export default class Breath extends Component {
     const innerDarkCircle = {"backgroundColor": "#3868c2", "display": `${displayState}`}
     const lightModeBG = {"backgroundImage": `url(${ocean})`}
     const darkModeBG = {"backgroundImage": `url(${night})`}
+    const lightText = {"color": 'black'}
+    const darkText = {"color": 'white'}
 
     return (
       <div>
@@ -65,29 +66,30 @@ export default class Breath extends Component {
             <div className = 'circle-container'>
               <div className = "circle" style = {this.state.darkMode ? darkCircle : lightCircle}>
                 <div className = {`circle ${this.state.classNames}`}
-                  style = {this.state.darkMode ? innerDarkCircle: innerLightCircle}/>
+                  style = {darkMode ? innerDarkCircle: innerLightCircle}/>
               </div>
     
               <div className = {`directions ${this.state.classNames}`}></div>
               
             </div>
+
+            <button className = "start-bttn" onClick = {this.handleStart}>{labelBttn}</button>
     
-            <div className = 'tst-bttn'>
-              <button onClick = {this.handleStart}>{labelBttn}</button>
+            <div className = 'toggle-bttn'>
+            <span style = {darkMode ? darkText: lightText}>{darkMode ? 'Light Mode' : 'Dark Mode'}</span>
               <label>
                 <Toggle
                   defaultChecked={this.state.darkMode}
-                  // icons={{
-                  //   checked: <Heart />,
-                  //   unchecked: null,
-                  // }}
+                  className = "light-switch"
+                  icons={{
+                    checked: null,
+                    unchecked: null,
+                  }}
                   onChange={this.handleToggle} />
-                <span>Custom icons</span>
-              </label>
+                </label>
             </div>
-    
           </div>
-        )}
+          )}
       </div>
     )
   }

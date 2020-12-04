@@ -34,11 +34,37 @@ body, html {
   justify-content: center;
 }
 
-.tst-bttn{
+.start-bttn{
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  font-size: 18px;
+}
+
+.toggle-bttn{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: absolute;
   top: 8px;
   right: 16px;
   font-size: 18px;
+}
+
+.light-switch.react-toggle--checked .react-toggle-track {
+  background-color: #434ee9;
+}
+
+.react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track {
+  background-color: #f88b0d;
+}
+
+.react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
+  background-color: #0a1b7c;
+}
+
+.react-toggle-track{
+  background-color: #f1c54b;
 }
 
 .directions{
@@ -69,6 +95,8 @@ body, html {
   border-radius:50%;
   margin: 0 auto;
 }
+
+
 
 @media (prefers-reduced-motion: no-preference) {
   .circle.animation{

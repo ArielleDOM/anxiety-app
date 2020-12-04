@@ -1,7 +1,25 @@
-body, html {
+body, html #root {
+  width: 100%;
   height: 100%;
   margin: 0;
+  padding: 0;
   background-color: rgb(26, 25, 49)
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.snow-container{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: -100;
+}
+
+.canvas{
+  width: 100%;
+  height: 100%;
 }
 
 .bg-dim{
@@ -32,6 +50,17 @@ body, html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.landing-page{
+  background-repeat: no-repeat; 
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-image: url('./images/backgrounds/mountain-bg.jpg')
 }
 
 .start-bttn{

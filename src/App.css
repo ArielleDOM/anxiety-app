@@ -52,6 +52,13 @@ body, html #root {
   justify-content: center;
 }
 
+.video-player{
+  padding: 20px;
+  background-color: #4866b8;
+  position: absolute;
+  top: 35%;
+  left: 16px;
+}
 .landing-page{
   background-repeat: no-repeat; 
   background-position: center center;
@@ -63,7 +70,10 @@ body, html #root {
   background-image: url('./images/backgrounds/mountain-bg.jpg')
 }
 
-.start-bttn{
+.controls-bttns{
+  display: flex;
+  padding:10px;
+  justify-content: space-between;
   position: absolute;
   top: 8px;
   left: 16px;

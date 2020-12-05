@@ -37,7 +37,7 @@ export default class Landing extends Component {
                     volume = {30}
                     loop = {true}
                     />
-                    <Particles params={particlesConfig} />
+                    <Particles height = "100vh" width = "100vw" params={particlesConfig} />
                 </div>  
             </div>
             )}
